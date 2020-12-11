@@ -7,11 +7,14 @@ class MyApp extends React.Component {
         this.state = {
             count: 0
         }
+        this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick() {
-        this.setState({
-            count: this.state.count + 1
+        this.setState(prevState => {
+            return {
+                count: prevState.count + 1
+            }
         })
     }
 
@@ -19,13 +22,13 @@ class MyApp extends React.Component {
         return (
             <div>
                 <h1>{this.state.count}</h1>
-                <button onClick={() => this.handleClick}>Change!</button>
+                <button onClick={this.handleClick}>Change!</button>
             </div>
         )
     }
 }
 
 ReactDOM.render(
-    <MyApp />, 
+    <MyApp />,
     document.getElementById('root')
 )
