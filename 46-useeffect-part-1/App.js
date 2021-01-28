@@ -3,7 +3,6 @@ import randomcolor from 'randomcolor'
 
 function App() {
     const [count, setCount] = useState(0)
-    const [answer, setAnswer] = useState('Yes')
     const [color, setColor] = useState('')
 
     function increment() {
