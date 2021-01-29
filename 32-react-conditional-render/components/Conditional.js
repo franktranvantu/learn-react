@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-function Conditional() {
-  return (
-    <div>Hello</div>
-  )
+class Conditional extends Component {
+
+  render() {
+    return (
+      <div>Hello</div>
+    )
+  }
 }
 
 export default Conditional

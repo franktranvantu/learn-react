@@ -1,5 +1,6 @@
 import React from 'react'
 import Conditional from './Conditional'
+import Loading from './Loading'
 
 class App extends React.Component {
     constructor() {
@@ -20,7 +21,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                {this.state.isLoading ? <div>Loading...</div> : <Conditional isLoading={this.state.isLoading} />}
+                {this.state.isLoading ? <Loading /> : <Conditional isLoading={this.state.isLoading} />}
             </div>
         )
     }
